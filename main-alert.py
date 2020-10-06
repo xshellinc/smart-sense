@@ -49,7 +49,7 @@ def main():
         thi = get_thi(temp, hum)
         level = get_thi_level(thi)
         if (thi_level < 4 and level >= 4) or (thi_level < 5 and level >= 5):
-            alert(f'不快指数のレベルが上昇しています。現在の不快指数は{thi}です。')
+            alert(f'不快指数のレベルが上昇しています。現在の不快指数は{round(thi)}です。')
         thi_level = level
 
         '''
@@ -58,7 +58,7 @@ def main():
         wbgt = get_wbgt(temp, hum)
         level, msg = get_wbgt_level(wbgt)
         if (wbgt_level < 3 and level >= 3) or (wbgt_level < 4 and level >= 4):
-            alert(f'【{msg}】熱中症にご注意ください！現在の暑さ指数は{wbgt}です。')
+            alert(f'【{msg}】熱中症にご注意ください！現在の暑さ指数は{round(wbgt)}です。')
         wbgt_level = level
 
         '''
@@ -67,7 +67,7 @@ def main():
         vh = get_vh(temp, hum)
         level, msg = get_flu_level(vh)
         if (vh_level < 3 and level >= 3) or (vh_level < 4 and level >= 4):
-            alert(f'【{msg}】インフルエンザにご注意ください。現在の絶対湿度は{vh}g/m3です。加湿しましょう。')
+            alert(f'【{msg}】インフルエンザにご注意ください。現在の絶対湿度は{round(vh)}g/m3です。加湿しましょう。')
         vh_level = level
 
         time.sleep(CHECK_SPAN)
