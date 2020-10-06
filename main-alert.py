@@ -19,7 +19,6 @@ def alert(message):
         "value1": message
     }
     res = webhook.post(event='send_message', payload=payload)
-    print(res.ok)
     if not res.ok:
         print('Request failed with status code', res.status_code)
 
