@@ -28,4 +28,5 @@ if __name__ == '__main__':
     level = get_thi_level(thi)
 
     print(f'Temperature: {temp}, Humidity: {hum}')
-    print(f'TH-index: {thi}, Level: {level}')
+    print(f'TH-index: {thi}')
+    print(f'Level: {level}')
