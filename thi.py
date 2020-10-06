@@ -17,6 +17,7 @@ def get_thi_level(thi):
 
 if __name__ == '__main__':
     from sense_hat import SenseHat
+    #from sense_emu import SenseHat
 
     sense = SenseHat()
 
@@ -26,4 +27,5 @@ if __name__ == '__main__':
     thi = get_thi(temp, hum)
     level = get_thi_level(thi)
 
-    print(f'TH-index: {thi}, TH-level: {level}')
+    print(f'Temperature: {temp}, Humidity: {hum}')
+    print(f'TH-index: {thi}, Level: {level}')

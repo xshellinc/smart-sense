@@ -3,18 +3,21 @@ def get_wbgt(temp, hum):
 
 
 def get_wbgt_level(wbgt):
-    if wbgt < 25:
-        return 1, "注意"
-    if wbgt < 28:
-        return 2, "警戒"
-    if wbgt < 31:
-        return 3, "厳重警戒"
-    else:
+    if wbgt >= 31:
         return 4, "危険"
+    if wbgt >= 28:
+        return 3, "厳重警戒"
+    if wbgt >= 25:
+        return 2, "警戒"
+    if wbgt >= 21:
+        return 1, "注意"
+
+    return 0, ""
 
 
 if __name__ == '__main__':
     from sense_hat import SenseHat
+    #from sense_emu import SenseHat
 
     sense = SenseHat()
 
@@ -24,5 +27,6 @@ if __name__ == '__main__':
     wbgt = get_wbgt(temp, hum)
     level, msg = get_wbgt_level(wbgt)
 
+    print(f'Temperature: {temp}, Humidity: {hum}')
     print(f'WBGT: {wbgt}')
     print(f'Level: {level}, Message: {msg}')
