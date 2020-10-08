@@ -17,9 +17,11 @@ if __name__ == '__main__':
     from sense_hat import SenseHat
     #from sense_emu import SenseHat
 
+    TEMP_DELTA = 0
+
     sense = SenseHat()
 
-    temp = sense.get_temperature()
+    temp = sense.get_temperature() - TEMP_DELTA
     hum = sense.get_humidity()
 
     vh = get_vh(temp, hum)

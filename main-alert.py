@@ -9,6 +9,7 @@ from datetime import datetime
 
 
 IFTTT_KEY = ''
+TEMP_DELTA = 0
 CHECK_SPAN = 60 * 10
 
 sense = SenseHat()
@@ -31,7 +32,7 @@ def main():
     vh_level = 0
     while True:
         now = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
-        temp = sense.get_temperature()
+        temp = sense.get_temperature() - TEMP_DELTA
         hum = sense.get_humidity()
 
         payload = {
