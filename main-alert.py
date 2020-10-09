@@ -26,7 +26,6 @@ def alert(message):
 
 
 def main():
-    thi_level = 0
     wbgt_level = 0
     vh_level = 0
     while True:
