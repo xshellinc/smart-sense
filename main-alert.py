@@ -1,6 +1,5 @@
 from sense_hat import SenseHat
 from ifttt import Webhook
-from thi import *
 from wbgt import *
 from flu import *
 
@@ -43,15 +42,6 @@ def main():
         res = webhook.post(event='send_data', payload=payload)
         if not res.ok:
             print('Request failed with status code', res.status_code)
-
-        '''
-        不快指数レベルが４以上に変化したらアラートを出す
-        '''
-        thi = get_thi(temp, hum)
-        level = get_thi_level(thi)
-        if (thi_level < 4 and level >= 4) or (thi_level < 5 and level >= 5):
-            alert(f'不快指数のレベルが上昇しています。現在の不快指数は{round(thi)}です。')
-        thi_level = level
 
         '''
         熱中症警戒度が3以上に変化したらアラートを出す
