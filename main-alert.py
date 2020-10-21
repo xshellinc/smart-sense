@@ -1,4 +1,5 @@
 from sense_hat import SenseHat
+#from sense_emu import SenseHat
 from ifttt import Webhook
 from wbgt import *
 from flu import *
