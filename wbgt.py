@@ -18,10 +18,12 @@ def get_wbgt_level(wbgt):
 if __name__ == '__main__':
     from sense_hat import SenseHat
     #from sense_emu import SenseHat
+    #from dht22 import DHT22
 
     TEMP_DELTA = 0
 
     sense = SenseHat()
+    #sense = DHT22()
 
     temp = sense.get_temperature() - TEMP_DELTA
     hum = sense.get_humidity()

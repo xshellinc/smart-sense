@@ -1,7 +1,9 @@
 from sense_hat import SenseHat
+#from dht22 import DHT22
 
 
 sense = SenseHat()
+#sense = DHT22()
 
 
 def main():

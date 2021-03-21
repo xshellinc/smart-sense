@@ -1,5 +1,6 @@
 from sense_hat import SenseHat
 #from sense_emu import SenseHat
+#from dht22 import DHT22
 from ifttt import Webhook
 
 import time
@@ -11,6 +12,7 @@ TEMP_DELTA = 0
 CHECK_SPAN = 60 * 10
 
 sense = SenseHat()
+#sense = DHT22()
 webhook = Webhook('send_data', IFTTT_KEY)
 
 

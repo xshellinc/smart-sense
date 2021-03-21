@@ -1,5 +1,6 @@
 from sense_hat import SenseHat
 #from sense_emu import SenseHat
+#from dht22 import DHT22
 
 import csv
 import time
@@ -10,6 +11,7 @@ TEMP_DELTA = 0
 CHECK_SPAN = 10
 
 sense = SenseHat()
+#sense = DHT22()
 
 
 def main():
