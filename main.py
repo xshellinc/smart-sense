@@ -1,9 +1,8 @@
-from sense_hat import SenseHat
-#from dht22 import DHT22
+from sense_hat import SenseHat as Sensor
+#from dht22 import DHT22 as Sensor
 
 
-sense = SenseHat()
-#sense = DHT22()
+sense = Sensor()
 
 
 def main():

@@ -14,14 +14,13 @@ def get_flu_level(vh):
 
 
 if __name__ == '__main__':
-    from sense_hat import SenseHat
-    #from sense_emu import SenseHat
-    #from dht22 import DHT22
+    from sense_hat import SenseHat as Sensor
+    #from sense_emu import SenseHat as Sensor
+    #from dht22 import DHT22 as Sensor
 
     TEMP_DELTA = 0
 
-    sense = SenseHat()
-    #sense = DHT22()
+    sense = Sensor()
 
     temp = sense.get_temperature() - TEMP_DELTA
     hum = sense.get_humidity()
