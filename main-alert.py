@@ -1,6 +1,6 @@
-from sense_hat import SenseHat
-#from sense_emu import SenseHat
-#from dht22 import DHT22
+from sense_hat import SenseHat as Sensor
+#from sense_emu import SenseHat as Sensor
+#from dht22 import DHT22 as Sensor
 from ifttt import Webhook
 from wbgt import *
 from flu import *
@@ -13,8 +13,7 @@ IFTTT_KEY = ''
 TEMP_DELTA = 0
 CHECK_SPAN = 60 * 10
 
-sense = SenseHat()
-#sense = DHT22()
+sense = Sensor()
 # イベント名は後で変更するので最初は何でも良い
 webhook = Webhook('demo', IFTTT_KEY)
 
